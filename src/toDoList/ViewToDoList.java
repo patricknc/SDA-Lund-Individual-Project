@@ -18,6 +18,7 @@ public class ViewToDoList {
 		TaskRegister aTaskRegister = new TaskRegister();
 
 		 Task task1 = new Task(10, "Planning", "4-11-2019", "16-11-2019", "Done");
+		 
 		 Task task2 = new Task(20, "Requirements", "18-11-2019", "23-11-2019","Done"); 
 		 Task task3 = new Task(30, "Design and Prototyping", "25-11-2019","30-11-2019", "Done"); 
 		 Task task4 = new Task(40, "Software development", "2-12-2019", "14-12-2019", "Not Done"); 
@@ -27,7 +28,7 @@ public class ViewToDoList {
 		 
 
 		 project1.setTask(task1); 
-		 task1.setProject(project1);
+		 //task1.setProject(project1);
 
 		char quit = 'n';
 		String input;
@@ -36,12 +37,12 @@ public class ViewToDoList {
 		Scanner scanner = new Scanner(System.in);
 		while (quit != 'y') {
 			ArrayList<Task> readTaskList = new ArrayList<Task>();
+			readTaskList = aTaskRegister.TaskList();
 			System.out.println("Welcome to ToDoList" + "\nYou have X tasks todo and Y tasks are done!" + "\nPick an option:"
 					+ "\n1. Show Task List(by date or project)" 
 					+ "\n2. Add New Task"
-					+ "\n3. Edit Task(update, mark as done, remove)" 
-					+ "\n4. Remove Task" 
-					+ "\n5. Save and Quite");
+					+ "\n3. Remove Task" 
+					+ "\n4. Save and Quite");
 			
 			choice = scanner.nextInt();
 			switch (choice) {
@@ -53,13 +54,9 @@ public class ViewToDoList {
 			aTaskRegister.add();
 			break;
 			case 3:
-				readTaskList = aTaskRegister.TaskList();
-			aTaskRegister.update(readTaskList);
-			break;
-			case 4:
 			aTaskRegister.remove(readTaskList);
 			break;
-			case 5:
+			case 4:
 			System.exit(1);
 			break;
 			default:
