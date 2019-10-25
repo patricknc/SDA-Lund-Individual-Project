@@ -2,6 +2,8 @@ package toDoList;
 
 import java.util.ArrayList;
 
+import model.Task;
+
 public class Project {
 	
 	private int projectId;
@@ -18,15 +20,15 @@ public class Project {
 	public int getProjectId() {
 		return projectId;
 	}
-
 	public void setProjectId(int projectId) {
+		if(projectId <= 100)
+			throw new IllegalArgumentException();
 		this.projectId = projectId;
 	}
 
 	public String getProjectTitle() {
 		return projectTitle;
 	}
-
 	public void setProjectTitle(String projectTitle) {
 		this.projectTitle = projectTitle;
 	}

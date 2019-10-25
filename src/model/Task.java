@@ -1,4 +1,6 @@
-package toDoList;
+package model;
+
+import toDoList.Project;
 
 public class Task {
 	
@@ -22,15 +24,15 @@ public class Task {
 	public int getTaskId() {
 		return taskId;
 	}
-
 	public void setTaskId(int taskId) {
+		if(taskId <= 0)
+			throw new IllegalArgumentException();
 		this.taskId = taskId;
 	}
 
 	public String getTaskTitle() {
 		return taskTitle;
 	}
-
 	public void setTaskTitle(String taskTitle) {
 		this.taskTitle = taskTitle;
 	}
@@ -38,7 +40,6 @@ public class Task {
 	public String getStartDate() {
 		return startDate;
 	}
-
 	public void setStartDate(String startDate) {
 		this.startDate = startDate;
 	}
@@ -46,7 +47,6 @@ public class Task {
 	public String getDueDate() {
 		return dueDate;
 	}
-
 	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
@@ -54,7 +54,6 @@ public class Task {
 	public String getStatus() {
 		return status;
 	}
-
 	public void setStatus(String status) {
 		this.status = status;
 	}
@@ -62,9 +61,8 @@ public class Task {
 	public Project getProject() {
 		return project;
 	}
-
 	public void setProject(Project project) {
 		this.project = project;
 	}
-	
+
 }
