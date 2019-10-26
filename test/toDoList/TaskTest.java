@@ -11,7 +11,7 @@ public class TaskTest {
 
 	@Before
 	public void setUp() {
-		task = new Task(10, "Planning", "4-11-2019", "16-11-2019", "Done");
+		task = new Task(10, "Identification", "28-10-2019", "29-10-2019", "Done");
 	}
 
 	@Test

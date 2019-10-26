@@ -17,16 +17,8 @@ public class ViewToDoList {
 
 		TaskRegister aTaskRegister = new TaskRegister();
 
-		 Task task1 = new Task(10, "Planning", "4-11-2019", "16-11-2019", "Done");
+		 Task task1 = new Task(10, "Identification", "28-10-2019", "29-10-2019", "Done");
 		 
-		 Task task2 = new Task(20, "Requirements", "18-11-2019", "23-11-2019","Done"); 
-		 Task task3 = new Task(30, "Design and Prototyping", "25-11-2019","30-11-2019", "Done"); 
-		 Task task4 = new Task(40, "Software development", "2-12-2019", "14-12-2019", "Not Done"); 
-		 Task task5 = new Task(50, "Testing","16-12-2019", "21-12-2019", "Not Done"); 
-		 Task task6 = new Task(60, "Deployment", "23-12-2019", "25-12-2019", "Not Done"); 
-		 Task task7 = new Task(70, "Maintenance", "26-12-2019", "31-12-2019", "Not Done");
-		 
-
 		 project1.setTask(task1); 
 		 //task1.setProject(project1);
 

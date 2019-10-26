@@ -125,7 +125,6 @@ public class TaskRegister {
 			readTaskList.remove(index);
 		}		
 		writeUpdate(filePath, readTaskList);
-
 	}
 
 	/*
