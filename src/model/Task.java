@@ -9,16 +9,17 @@ public class Task {
 	private String startDate;
 	private String dueDate;
 	private String status;
-	private Project project;
+	private String project;
 	
 	public Task() {}
 	
-	public Task(int taskId, String taskTitle, String startDate, String dueDate, String status) {
+	public Task(int taskId, String taskTitle,String dueDate, String status,String project) {
 		this.setTaskId(taskId);
 		this.setTaskTitle(taskTitle);
 		this.setStartDate(startDate);
 		this.setDueDate(dueDate);
 		this.setStatus(status);
+		this.setProject(project);
 	}
 
 	public int getTaskId() {
@@ -58,11 +59,14 @@ public class Task {
 		this.status = status;
 	}
 
-	public Project getProject() {
+	public String getProject() {
 		return project;
 	}
-	public void setProject(Project project) {
+	public void setProject(String project) {
 		this.project = project;
 	}
 
+	public String toString() {
+		return this.getTaskId()+","+this.getTaskTitle()+","+this.getDueDate()+","+this.getStatus()+","+this.getProject();
+	}
 }
